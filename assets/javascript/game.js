@@ -5,27 +5,19 @@ let guessesSoFar = [];
 let pyschicChoice = "";
 let userGuess = "";
 
-// array of all the letters in the english alphabet
+// array of all the letters
 let alphabet = [
 			"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", 
 			"n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
 			];
 
-// for loop through the alphabet array
-// for (let i = 0; i < alphabet.length; i++) {
-// 		// console.log(alphabet[i]);
-// 	};
-
-// Randomly chooses a letter from the alphabet array. This is the psychic's choice.
+// Randomly chooses a letter
 
 let pyschic = () =>  {
-	pyschicChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
-
-	// console.log(pyschicChoice);
-
+	pyschicChoice = alphabet[Math.floor(Math.random() * alphabet.length)]
 }
 
-// Function to Reset Game to original settings
+// Function to Reset Game
 let resetGame = () => {
 	guessesLeft = 13;
 	guessesSoFar = [];
@@ -34,7 +26,7 @@ let resetGame = () => {
 
 
 
-// Grab users keystroke to intput there guess at the letter and start the game
+// Grab users keystroke
 document.onkeyup = (event) => {
 
 	userGuess = event.key.toLowerCase();
@@ -52,22 +44,21 @@ document.onkeyup = (event) => {
 		guessesLeft--;
 		guessesSoFar.push(userGuess);
 	
-
-
-
-	// Output to place on the webpage
+	// Output 
 	let html = 
-		"<p>Guesses Left </p>" +
-		"<p>"+ guessesLeft + "</p>" +
-		"<p>Letters Guessed</p>" + 
-		"<p>"+ guessesSoFar + "</p>" +
-		"<br>" +
-		"<p>Correct </p>" + 
-		"<p>"+ correct + "</p>" +
-		"<p>Incorrect </p>" + 
-		"<p>"+ incorrect + "</p>";
 
-	// Set the inner HTML contents of the game_output id to our html string
+		"<p>Wins: </p>" + 
+		"<p>"+ correct + "</p>" +
+		"<p>Losses: </p>" + 
+		"<p>"+ incorrect + "</p>" +
+		"<p>Guesses Left: </p>" +
+		"<p>"+ guessesLeft + "</p>" +
+		"<p>Your Guesses so far:</p>" + 
+		"<p>"+ guessesSoFar + "</p>" +
+		"<br>";
+	
+
+	// Set the inner HTML contents
     document.querySelector("#game_output").innerHTML = html;
 
     if ( guessesLeft === 0 ) {
