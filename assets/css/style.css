@@ -1,17 +1,18 @@
 h1 {
 	font-size: 44px;
 	font-weight: bold;
-	font-family: sans-serif;
+	font-family: serif;
 	line-height: 50px;
 }
 
 h3 {
 	font-size: 24px;
 	line-height: 30px;
+	font-family: serif;
 }
 
 p {
 	line-height: 20px;
 	font-size: 18px;
-	font-family: sans-serif;
+	font-family: serif
 }
