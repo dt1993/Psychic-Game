@@ -1,6 +1,6 @@
 # Psychic-Game
 
-- [Psychic-Game](https://dt1993.github.io/Psychic-Game/)
+- [Psychic Game](https://dt1993.github.io/Psychic-Game/)
 
 ## Option One: Psychic Game (Basic)
 
